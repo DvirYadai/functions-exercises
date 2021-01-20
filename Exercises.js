@@ -58,8 +58,27 @@ function getFirstNotRepeating(str) {
 
 //Question 6 (Bonus)
 function isPrefectNumber(num) {
-  // your code here
-  return "I'm not interested in the bonus question :(";
+  const divisorsArr = [];
+  let tempSum = num;
+  while(tempSum > 1){
+    divisorsArr.push(Math.ceil(tempSum / 2));
+    tempSum = Math.ceil(tempSum / 2);
+  }
+  tempSum = 0;
+  for(let i = 0; i < divisorsArr.length; i++){
+    tempSum += divisorsArr[i];
+  }
+  let bool = false;
+  if(tempSum === num){
+    for(let i = 0; i < divisorsArr.length; i++){
+      if((num % divisorsArr[i]) === 0){
+        bool = true;
+      } else break;
+    }
+  }
+  if(bool){
+    return true;
+  } else return false;
 }
 
 // *** Playground ***
