@@ -10,7 +10,11 @@ function myReverse(str) {
 //Question 2
 function allCombinations(str) {
   let combinations = [];
-
+  for(let i = 0; i < str.length; i++){
+    for(let j = i; j < str.length; j++){
+      combinations.push(str.substring(i, j + 1));
+    }
+  }
   return combinations;
 }
 
@@ -39,6 +43,7 @@ function isPrefectNumber(num) {
 }
 
 // *** Playground ***
+
 
 
 // *** End of Playground ***
