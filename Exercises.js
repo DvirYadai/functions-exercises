@@ -33,8 +33,8 @@ function allCaps(str) {
 
 //Question 4
 function myPower(x, n) {
-  // your code here
-  return "";
+  const sum = x*n;
+  return sum;
 }
 
 //Question 5
