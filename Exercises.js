@@ -20,9 +20,16 @@ function allCombinations(str) {
 
 //Question 3
 function allCaps(str) {
-  // your code here
-  return "";
+  let newStr = "";
+  newStr += str.slice(0, 1).toUpperCase();
+  for(let i = 1; i < str.length; i++){
+    if(str[i - 1] === " "){
+      newStr += str.slice(i, i + 1).toUpperCase();
+    } else newStr += str.slice(i, i + 1);
+  }
+  return newStr;
 }
+
 
 //Question 4
 function myPower(x, n) {
